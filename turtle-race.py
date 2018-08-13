@@ -1,0 +1,85 @@
+
+# coding: utf-8
+
+# In[1]:
+
+
+from turtle import *
+from random import *
+speed(50)
+penup()
+bgcolor("#94B3C6")
+#penup()
+goto(-150,100)
+for i in range(15):
+    write(i)
+    right(90)
+    forward(10)
+    pendown()
+    forward(10)
+    penup()
+    forward(40)
+    pendown()
+    forward(10)
+    penup()
+    forward(40)
+    pendown()
+    forward(10)
+    penup()
+    forward(39)
+    pendown()
+    forward(10)
+    penup()
+    forward(35)
+    pendown()
+    forward(10)
+    penup()
+    backward(214)
+    left(90)
+    forward(30)
+a=Turtle()
+a.color('red')
+a.shape("turtle")
+a.penup()
+a.goto(-160,-83)
+a.pendown()
+b=Turtle()
+b.color('blue')
+b.shape("turtle")
+b.penup()
+b.goto(-160,-35)
+b.pendown()
+c=Turtle()
+c.color('black')
+c.shape("turtle")
+c.penup()
+c.goto(-160,10)
+c.pendown()
+d=Turtle()
+d.color('yellow')
+d.shape("turtle")
+d.penup()
+d.goto(-160,60)
+d.pendown()
+for j in range(140):
+    a.forward(randint(1,5))
+    b.forward(randint(1,5))
+    c.forward(randint(1,5))
+    d.forward(randint(1,5))
+l=[]
+l.append(a.xcor())
+l.append(b.xcor())
+l.append(c.xcor())
+l.append(d.xcor())
+goto(70,-160)
+pencolor("brown")
+winner=max(l)
+if(l[0]==winner):
+    write('RED is winner',align='center',font=("Comic Sans", 18, "bold"))
+elif(l[1]==winner):    
+     write('BLUE is winner',align='center',font=("Comic Sans", 18, "bold"))
+elif(l[2]==winner):    
+     write('BLACK is winner',align='center',font=("Comic Sans",18, "normal"))
+elif(l[3]==winner):
+    write('YELLOW is winner',align='center',font=("Comic Sans", 18, "normal"))
+
